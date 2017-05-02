@@ -65,6 +65,11 @@ do{
 }while(kl!=0);
 
 fclose(text);
+FILE* itog;
+itog=fopen("itog.txt","w");
+fwrite(&mass,sizeof(mass),1,itog);
+fclose(itog);
+
 
 printf("Result:\n%s",mass);
 
