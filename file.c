@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
+#include "lib.h"
 int l=0;
 char mass[255],x[255],a[255],b[255];
 bool p1=true,p2=false;
