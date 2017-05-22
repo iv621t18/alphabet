@@ -78,7 +78,7 @@ void file()
 		memcpy(mass, x, 255);
 		memset(x, (char)0, sizeof(x));
 	}
-	while(kl! = 0);
+	while(kl!=0);
 	fclose(text);
 	FILE* itog;
 	itog = fopen("itog.txt", "w");
