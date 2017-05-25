@@ -1,5 +1,8 @@
+
 #include <stdbool.h> 
 void menu();
-char vvod();
+void vvod();
 void file();
+int razdelenie(char *mass1,int l);
+
 
