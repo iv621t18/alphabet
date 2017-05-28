@@ -1,5 +1,8 @@
+
 #include <stdbool.h> 
 void menu();
 void vvod();
 void file();
-void sort(bool end);
+int razdelenie(char *mass1,int l);
+
+
