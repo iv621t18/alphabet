@@ -4,6 +4,6 @@
 void menu();
 void vvod();
 void file();
-int razdelenie(char *mass1, int l);
+int separation(char *mass1, int l);
 
 #endif

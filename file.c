@@ -6,10 +6,10 @@ void file() {
     char mass[255];
     FILE *text;
     int n;
-    text = fopen("text.txt","r");
+    text = fopen("text.txt", "r");
     if(fgets(mass, 255, text) != NULL)
-        mass[strlen(mass)-1] = 0;
+        mass[strlen(mass) - 1] = 0;
 	int l = strlen(mass);
-	razdelenie(mass, l); 
+	separation(mass, l); 
 }
 
