@@ -1,6 +1,5 @@
 #include "lib.h"
 #include <stdio.h>
-#include <stdbool.h>
 
 void menu() {
     int x = 0;

@@ -1,19 +1,24 @@
-#include <stdio.h>
 #include <string.h>
-#include <stdbool.h>
 #include <stdio_ext.h>
 #include "lib.h"
 
-void in_file(char *x1)
+void in_file(char *mass1)
 {
 	FILE* itog;
 	itog=fopen("itog.txt","w");
-	fwrite(&x1,sizeof(x1),1,itog);
+	fwrite(&mass1,sizeof(mass1),1,itog);
 	fclose(itog);
-	printf("\nResult:\n%s",x1);
+	printf("\nResult:\n%s",mass1);
+	printf("\n");
 }
 
 int sort1(int var,char *a1, char *b1, char *x1,int *kl1,int *p21,int *p11,int l)
+/*kl1, p21, p11 - keys
+y - флаг конца файла
+z - когда не конец файла
+x1 - отсортированный массив
+a1 и b1 - отсортированные слова
+var - конец или не конец файла*/
 {
 	if((unsigned char)a1[0]>(unsigned char)b1[0]){
  			strcat(x1,b1);
