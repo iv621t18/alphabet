@@ -5,7 +5,7 @@ all: bin/kursach
 mkdir:
 	mkdir bin
 
-bin/kursach: src/main.c src/sort.c src/menu.c src/vvod.c 
-	gcc src/main.c src/sort.c src/menu.c src/vvod.c src/file.c -o bin/kursach
+bin/kursach: src/main.c src/sort.c src/menu.c src/enter.c 
+	gcc src/main.c src/sort.c src/menu.c src/enter.c src/file.c -o bin/kursach
 clean: 
 	rm -rf bin
