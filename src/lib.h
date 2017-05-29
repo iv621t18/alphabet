@@ -4,6 +4,7 @@
 void menu();
 void vvod();
 void file();
-int separation(char *mass1, int l);
+char *separation(char *mass1, int l);
+void in_file(char *mass1);
 
 #endif
