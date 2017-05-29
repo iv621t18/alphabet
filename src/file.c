@@ -4,12 +4,22 @@
 
 void file() { 	
     char mass[255];
-    FILE *text;
-    int n;
-    text = fopen("text.txt", "r");
-    if(fgets(mass, 255, text) != NULL)
-        mass[strlen(mass) - 1] = 0;
-	int l = strlen(mass);
-	separation(mass, l); 
-}
+    for (int i = 0; i < 255; i++) {
+    	mass[i] = 0;
+    }
+    FILE *text = fopen("text.txt", "r");
+    
+    fgets(mass, 255, text);
+    
+    for (int i = 0; i < 255; i++) {
+        if (mass[i] == '\n') {
+            mass[i] = '\0';
+        }
+    }
 
+	int l = strlen(mass);
+
+	char *str = separation(mass, l);
+    in_file(str);
+    fclose(text);
+}
