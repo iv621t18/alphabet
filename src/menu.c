@@ -3,13 +3,16 @@
 
 void menu() {
     int x = 0;
-    printf("%s\n", "1. Vvod");
+    printf("%s\n", "1. Enter");
     printf("%s\n", "2. File");
     scanf("%d", &x);
-    if (x == 1)
+    if (x == 1) {
         vvod();
-    else if (x == 2)
+    }
+    else if (x == 2) {
         file();
-    else 
+    }
+    else {
         printf("%s", "Wrong data\n");
+    }
 }
