@@ -22,5 +22,12 @@ int main (int argc, char* argv[])
 		return 1;
 	}
 
+	FILE *in = fopen(argv[1], "r");
+	if (in == NULL) {
+		printf("Usage: alphabet <input_file>\n");
+		return 1;
+	}
+
+	fclose(in);
 	return 0;
 }
