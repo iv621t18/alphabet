@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #include <sys/types.h>//Консанты
 #include <sys/stat.h>//Прототип chmod
 #include <unistd.h>//Прототип access
@@ -37,12 +38,20 @@ int main (int argc, char* argv[])
 		printf("SIGSEGV\n");
 		return 1;
 	}
+	int count = 0;
 	for (int i = 0; !feof(in); i++) {
 		str[i] = malloc(sizeof(char) * MAX_LEN_STR);
 		if (str[i] == NULL) {
 			printf("SIGSEGV\n");
 			return 1;
 		}
+		fgets(str[i], MAX_LEN_STR, in);
+		str[i][strlen(str[i]) - 1] = '\0';
+		if (str[i][0] == '\0') {
+			i--;
+			continue;
+		}
+		count++;
 	}
 
 	fclose(in);
