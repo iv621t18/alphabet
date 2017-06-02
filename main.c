@@ -5,6 +5,7 @@
 #include <stdlib.h>
 
 #define MAX_NUM_STR 512
+#define MAX_LEN_STR 256
 
 int main (int argc, char* argv[])
 {
@@ -35,6 +36,13 @@ int main (int argc, char* argv[])
 	if (str == NULL) {
 		printf("SIGSEGV\n");
 		return 1;
+	}
+	for (int i = 0; !feof(in); i++) {
+		str[i] = malloc(sizeof(char) * MAX_LEN_STR);
+		if (str[i] == NULL) {
+			printf("SIGSEGV\n");
+			return 1;
+		}
 	}
 
 	fclose(in);
