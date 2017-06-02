@@ -4,6 +4,7 @@
 #include <sys/stat.h>//Прототип chmod
 #include <unistd.h>//Прототип access
 #include <stdlib.h>
+#include "sort.h"
 
 #define MAX_NUM_STR 512
 #define MAX_LEN_STR 256
@@ -59,6 +60,12 @@ int main (int argc, char* argv[])
 	printf("Source:\n");
 	for (int i = 0; i < count; i++) {
 		printf("%s\n", str[i]);
+	}
+
+	str = sort(str, count);
+	if (str == NULL) {
+		printf("SIGSEGV");
+		return 1;
 	}
 
 	printf("\nResult:\n");
