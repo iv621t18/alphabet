@@ -55,5 +55,16 @@ int main (int argc, char* argv[])
 	}
 
 	fclose(in);
+
+	printf("Source:\n");
+	for (int i = 0; i < count; i++) {
+		printf("%s\n", str[i]);
+	}
+
+	printf("\nResult:\n");
+	for (int i = 0; i < count; i++) {
+		printf("%s\n", str[i]);
+	}
+
 	return 0;
 }
