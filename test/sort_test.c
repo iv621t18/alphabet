@@ -23,3 +23,10 @@ CTEST(SORT_TEST, ARRAY_IS_EMPTY)
 
 	ASSERT_STR(exp[0], 0);
 }
+
+CTEST(SORT_TEST, ARRAY_IS_NULL)
+{
+	char **exp = sort(NULL, 5);
+
+	ASSERT_NULL(exp);
+}
