@@ -14,3 +14,12 @@ CTEST(SORT_TEST, COMMON)
 		ASSERT_STR(exp[i], real[i]);
 	}
 }
+
+CTEST(SORT_TEST, ARRAY_IS_EMPTY)
+{
+	char **exp = calloc(1, sizeof(char*));
+
+	exp = sort(exp, 0);
+
+	ASSERT_STR(exp[0], 0);
+}
