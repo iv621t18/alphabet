@@ -30,3 +30,16 @@ CTEST(SORT_TEST, ARRAY_IS_NULL)
 
 	ASSERT_NULL(exp);
 }
+
+CTEST(SORT_TEST, DIGITAL_TEST)
+{
+	char *exp[] = {"10", "9", "8", "7", "6", "5", "4", "3", "2", "1", "0"};
+
+	sort(exp, 11);
+
+	char *real[] = {"0", "1", "10", "2", "3", "4", "5", "6", "7", "8", "9"};
+
+	for (int i = 0; i < 11; i++) {
+		ASSERT_STR(exp[i], real[i]);
+	}
+}
